@@ -14,6 +14,7 @@
       <include-collection dataCollectionGroup="Juniper"/>
       <include-collection dataCollectionGroup="Net-SNMP"/>
       <include-collection dataCollectionGroup="OpenNMS Appliances"/>
+      <include-collection dataCollectionGroup="Printers"/>
       <include-collection dataCollectionGroup="Routers"/>
    </snmp-collection>
 </datacollection-config>
