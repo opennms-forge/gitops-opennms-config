@@ -23,7 +23,7 @@
          <parameter key="factory" value="${requisition:factory|detector:factory|PASSWORD_CLEAR}" />
          <parameter key="username" value="${requisition:username|detector:username|cassandra-username}" />
          <parameter key="password" value="${requisition:password|detector:password|cassandra-password}" />
-         <parameter key="rrd-repository" value="${install.share.dir}/rrd/response" />
+         <parameter key="rrd-repository" value="/opt/opennms/share/rrd/response" />
          <parameter key="beans.storage" value="${requisition:beans.storage|detector:beans.storage|org.apache.cassandra.db:type=StorageService}" />
          <parameter key="tests.operational" value="${requisition:tests.operational|detector:tests.operational|storage.OperationMode == 'NORMAL'}" />
          <parameter key="tests.joined" value="${requisition:tests.joined|detector:tests.joined|storage.Joined}" />
@@ -40,7 +40,7 @@
          <parameter key="factory" value="${requisition:factory|detector:factory|PASSWORD_CLEAR}" />
          <parameter key="username" value="${requisition:username|detector:username|cassandra-username}" />
          <parameter key="password" value="${requisition:password|detector:password|cassandra-password}" />
-         <parameter key="rrd-repository" value="${install.share.dir}/rrd/response" />
+         <parameter key="rrd-repository" value="/opt/opennms/share/rrd/response" />
          <parameter key="beans.samples" value="${requisition:beans.samples|detector:beans.samples|org.apache.cassandra.db:type=ColumnFamilies,keyspace=newts,columnfamily=samples}" />
          <parameter key="tests.samples" value="${requisition:tests.samples|detector:tests.samples|samples.ColumnFamilyName == 'samples'}" />
          <parameter key="beans.terms" value="${requisition:beans.terms|detector:beans.terms|org.apache.cassandra.db:type=ColumnFamilies,keyspace=newts,columnfamily=terms}" />
@@ -69,7 +69,7 @@
       <service name="ICMP" interval="300000" user-defined="false" status="on">
          <parameter key="retry" value="${requisition:poller-retry|requisition:retry|detector:retry|2}" />
          <parameter key="timeout" value="${requisition:poller-timeout|requisition:timeout|detector:timeout|3000}" />
-         <parameter key="rrd-repository" value="${install.share.dir}/rrd/response" />
+         <parameter key="rrd-repository" value="/opt/opennms/share/rrd/response" />
          <parameter key="rrd-base-name" value="icmp" />
          <parameter key="ds-name" value="icmp" />
       </service>
@@ -79,7 +79,7 @@
          <parameter key="port" value="${requisition:port|detector:port|53}" />
          <parameter key="lookup" value="${requisition:lookup|detector:lookup|localhost}" />
          <parameter key="fatal-response-codes" value="${requisition:fatal-response-codes|detector:fatal-response-codes|2,3,5}" /><!-- ServFail, NXDomain, Refused -->
-         <parameter key="rrd-repository" value="${install.share.dir}/rrd/response" />
+         <parameter key="rrd-repository" value="/opt/opennms/share/rrd/response" />
          <parameter key="rrd-base-name" value="dns" />
          <parameter key="ds-name" value="dns" />
       </service>
@@ -95,7 +95,7 @@
          <parameter key="retry" value="${requisition:poller-retry|requisition:retry|detector:retry|1}" />
          <parameter key="timeout" value="${requisition:poller-timeout|requisition:timeout|detector:timeout|3000}" />
          <parameter key="port" value="${requisition:port|detector:port|25}" />
-         <parameter key="rrd-repository" value="${install.share.dir}/rrd/response" />
+         <parameter key="rrd-repository" value="/opt/opennms/share/rrd/response" />
          <parameter key="rrd-base-name" value="smtp" />
          <parameter key="ds-name" value="smtp" />
       </service>
@@ -114,7 +114,7 @@
          <parameter key="timeout" value="${requisition:poller-timeout|requisition:timeout|detector:timeout|3000}" />
          <parameter key="port" value="${requisition:port|detector:port|80}" />
          <parameter key="url" value="${requisition:url|detector:url|/}" />
-         <parameter key="rrd-repository" value="${install.share.dir}/rrd/response" />
+         <parameter key="rrd-repository" value="/opt/opennms/share/rrd/response" />
          <parameter key="rrd-base-name" value="http" />
          <parameter key="ds-name" value="http" />
       </service>
@@ -123,7 +123,7 @@
          <parameter key="timeout" value="${requisition:poller-timeout|requisition:timeout|detector:timeout|3000}" />
          <parameter key="port" value="${requisition:port|detector:port|8080}" />
          <parameter key="url" value="${requisition:url|detector:url|/}" />
-         <parameter key="rrd-repository" value="${install.share.dir}/rrd/response" />
+         <parameter key="rrd-repository" value="/opt/opennms/share/rrd/response" />
          <parameter key="rrd-base-name" value="http-8080" />
          <parameter key="ds-name" value="http-8080" />
       </service>
@@ -132,7 +132,7 @@
          <parameter key="timeout" value="${requisition:poller-timeout|requisition:timeout|detector:timeout|3000}" />
          <parameter key="port" value="${requisition:port|detector:port|8000}" />
          <parameter key="url" value="${requisition:url|detector:url|/}" />
-         <parameter key="rrd-repository" value="${install.share.dir}/rrd/response" />
+         <parameter key="rrd-repository" value="/opt/opennms/share/rrd/response" />
          <parameter key="rrd-base-name" value="http-8000" />
          <parameter key="ds-name" value="http-8000" />
       </service>
@@ -141,7 +141,7 @@
          <parameter key="timeout" value="${requisition:poller-timeout|requisition:timeout|detector:timeout|5000}" />
          <parameter key="port" value="${requisition:port|detector:port|443}" />
          <parameter key="url" value="${requisition:url|detector:url|/}" />
-         <parameter key="rrd-repository" value="${install.share.dir}/rrd/response" />
+         <parameter key="rrd-repository" value="/opt/opennms/share/rrd/response" />
          <parameter key="rrd-base-name" value="https" />
          <parameter key="ds-name" value="https" />
       </service>
@@ -153,7 +153,7 @@
       <service name="HypericHQ" interval="300000" user-defined="false" status="on">
          <parameter key="retry" value="${requisition:poller-retry|requisition:retry|detector:retry|1}" />
          <parameter key="timeout" value="${requisition:poller-timeout|requisition:timeout|detector:timeout|3000}" />
-         <parameter key="rrd-repository" value="${install.share.dir}/rrd/response" />
+         <parameter key="rrd-repository" value="/opt/opennms/share/rrd/response" />
          <parameter key="rrd-base-name" value="hyperic-hq" />
          <parameter key="ds-name" value="hyperic-hq" />
          <parameter key="page-sequence">
@@ -196,7 +196,7 @@
          <parameter key="banner" value="${requisition:banner|detector:banner|SSH}" />
          <parameter key="port" value="${requisition:port|detector:port|22}" />
          <parameter key="timeout" value="${requisition:poller-timeout|requisition:timeout|detector:timeout|3000}" />
-         <parameter key="rrd-repository" value="${install.share.dir}/rrd/response" />
+         <parameter key="rrd-repository" value="/opt/opennms/share/rrd/response" />
          <parameter key="rrd-base-name" value="ssh" />
          <parameter key="ds-name" value="ssh" />
       </service>
@@ -209,7 +209,7 @@
          <parameter key="retry" value="${requisition:poller-retry|requisition:retry|detector:retry|1}" />
          <parameter key="port" value="${requisition:port|detector:port|110}" />
          <parameter key="timeout" value="${requisition:poller-timeout|requisition:timeout|detector:timeout|3000}" />
-         <parameter key="rrd-repository" value="${install.share.dir}/rrd/response" />
+         <parameter key="rrd-repository" value="/opt/opennms/share/rrd/response" />
          <parameter key="rrd-base-name" value="pop3" />
          <parameter key="ds-name" value="pop3" />
       </service>
@@ -219,7 +219,7 @@
          <parameter key="port" value="${requisition:port|detector:port|5666}" />
          <parameter key="command" value="${requisition:command|detector:command|_NRPE_CHECK}" />
          <parameter key="padding" value="${requisition:padding|detector:padding|2}" />
-         <parameter key="rrd-repository" value="${install.share.dir}/rrd/response" />
+         <parameter key="rrd-repository" value="/opt/opennms/share/rrd/response" />
          <parameter key="ds-name" value="nrpe" />
       </service>
       <service name="NRPE-NoSSL" interval="300000" user-defined="false" status="on">
@@ -229,7 +229,7 @@
          <parameter key="command" value="${requisition:command|detector:command|_NRPE_CHECK}" />
          <parameter key="usessl" value="${requisition:usessl|detector:usessl|false}" />
          <parameter key="padding" value="${requisition:padding|detector:padding|2}" />
-         <parameter key="rrd-repository" value="${install.share.dir}/rrd/response" />
+         <parameter key="rrd-repository" value="/opt/opennms/share/rrd/response" />
          <parameter key="ds-name" value="nrpe" />
       </service>
       <service name="Windows-Task-Scheduler" interval="300000" user-defined="false" status="on">
@@ -239,7 +239,7 @@
          <parameter key="port" value="${requisition:port|detector:port|18980}" />
          <parameter key="retry" value="${requisition:poller-retry|requisition:retry|detector:retry|2}" />
          <parameter key="timeout" value="${requisition:poller-timeout|requisition:timeout|detector:timeout|3000}" />
-         <parameter key="rrd-repository" value="${install.share.dir}/rrd/response" />
+         <parameter key="rrd-repository" value="/opt/opennms/share/rrd/response" />
       </service>
       <service name="JMX-Kafka" interval="300000" user-defined="false" status="on">
          <parameter key="port" value="${requisition:port|detector:port|9999}" />
@@ -248,7 +248,7 @@
          <parameter key="factory" value="${requisition:factory|detector:factory|PASSWORD_CLEAR}" />
          <parameter key="username" value="${requisition:username|detector:username|admin}" />
          <parameter key="password" value="${requisition:password|detector:password|admin}" />
-         <parameter key="rrd-repository" value="${install.share.dir}/rrd/response" />
+         <parameter key="rrd-repository" value="/opt/opennms/share/rrd/response" />
       </service>
       <service name="VMwareCim-HostSystem" interval="300000" user-defined="false" status="on">
          <parameter key="retry" value="${requisition:poller-retry|requisition:retry|detector:retry|2}" />
@@ -276,7 +276,7 @@
          <parameter key="retry" value="${requisition:poller-retry|requisition:retry|detector:retry|1}" />
          <parameter key="port" value="${requisition:port|detector:port|22}" />
          <parameter key="timeout" value="${requisition:poller-timeout|requisition:timeout|detector:timeout|3000}" />
-         <parameter key="rrd-repository" value="${install.share.dir}/rrd/response" />
+         <parameter key="rrd-repository" value="/opt/opennms/share/rrd/response" />
          <parameter key="rrd-base-name" value="minassh" />
          <parameter key="ds-name" value="minassh" />
          <parameter key="username" value="${requisition:username|detector:username|admin}" />
@@ -305,14 +305,14 @@
       </service>
       <service name="Minion-RPC" interval="30000" user-defined="false" status="on">
          <parameter key="ttl" value="${requisition:ttl|detector:ttl|30000}" /><!-- TTL should be same as period -->
-         <parameter key="rrd-repository" value="${install.share.dir}/rrd/response" />
+         <parameter key="rrd-repository" value="/opt/opennms/share/rrd/response" />
          <parameter key="ds-name" value="minion-rpc" />
       </service>
       <service name="JMX-Minion" interval="30000" user-defined="false" status="on">
          <parameter key="port" value="${requisition:port|detector:port|18980}" />
          <parameter key="retry" value="${requisition:poller-retry|requisition:retry|detector:retry|2}" />
          <parameter key="timeout" value="${requisition:poller-timeout|requisition:timeout|detector:timeout|3000}" />
-         <parameter key="rrd-repository" value="${install.share.dir}/rrd/response" />
+         <parameter key="rrd-repository" value="/opt/opennms/share/rrd/response" />
          <parameter key="ds-name" value="jmx-minion" />
          <parameter key="use-foreign-id-as-system-id" value="${requisition:use-foreign-id-as-system-id|detector:use-foreign-id-as-system-id|true}" />
       </service>
@@ -345,7 +345,7 @@
          <parameter key="ping-count" value="${requisition:ping-count|detector:ping-count|20}" />
          <parameter key="failure-ping-count" value="${requisition:failure-ping-count|detector:failure-ping-count|20}" />
          <parameter key="wait-interval" value="${requisition:wait-interval|detector:wait-interval|50}" />
-         <parameter key="rrd-repository" value="${install.share.dir}/rrd/response" />
+         <parameter key="rrd-repository" value="/opt/opennms/share/rrd/response" />
          <parameter key="rrd-base-name" value="strafeping" />
       </service>
       <downtime begin="0" end="432000000" interval="300000" /><!-- 5m, 0, 5d -->
@@ -363,7 +363,7 @@
       </rrd>
       <service name="DeviceConfig" interval="300000" user-defined="false" status="on">
          <pattern><![CDATA[^DeviceConfig-(?<configType>.+)$]]></pattern>
-         <parameter key="rrd-repository" value="${install.share.dir}/rrd/response" />
+         <parameter key="rrd-repository" value="/opt/opennms/share/rrd/response" />
          <parameter key="rrd-base-name" value="device-config" />
          <!-- match service name suffix with config-type -->
          <parameter key="config-type" value="${pattern:configType|requisition:dcb:config-type|default}" />

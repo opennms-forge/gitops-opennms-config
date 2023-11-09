@@ -12,18 +12,18 @@
     maxSize="50" />
 
   <jdbc-data-source name="opennms" 
-                    database-name="${install.database.name}" 
-                    class-name="${install.database.driver}" 
-                    url="jdbc:postgresql://localhost:5432/${install.database.name}"
-                    user-name="${install.database.user}"
-                    password="${install.database.password}" />
+                    database-name="opennms"
+                    class-name="org.postgresql.Driver"
+                    url="jdbc:postgresql://localhost:5432/opennms"
+                    user-name="opennms"
+                    password="opennms" />
 
   <jdbc-data-source name="opennms-admin" 
                     database-name="template1" 
-                    class-name="${install.database.driver}" 
+                    class-name="org.postgresql.Driver"
                     url="jdbc:postgresql://localhost:5432/template1"
-                    user-name="${install.database.admin.user}"
-                    password="${install.database.admin.password}">
+                    user-name="postgres"
+                    password="">
     <connection-pool idleTimeout="600"
                      minPool="0"
                      maxPool="10"
@@ -32,10 +32,10 @@
   
   <jdbc-data-source name="opennms-monitor" 
                     database-name="postgres" 
-                    class-name="${install.database.driver}" 
+                    class-name="org.postgresql.Driver"
                     url="jdbc:postgresql://localhost:5432/postgres"
-                    user-name="${install.database.admin.user}"
-                    password="${install.database.admin.password}">
+                    user-name="postgres"
+                    password="">
     <connection-pool idleTimeout="600"
                      minPool="0"
                      maxPool="10"
