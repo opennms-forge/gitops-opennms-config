@@ -45,14 +45,4 @@
         anchor your regular expression matches with ^ and $, like in the examples below.  Failure to do so can
         cause extreme slowdowns, especially with large amounts of <ueiMatch> tags.
     -->
-
-    <import-file>syslog/ApacheHTTPD.syslog.xml</import-file>
-    <import-file>syslog/LinuxKernel.syslog.xml</import-file>
-    <import-file>syslog/NetgearProsafeSmartSwitch.syslog.xml</import-file>
-    <import-file>syslog/OpenSSH.syslog.xml</import-file>
-    <import-file>syslog/OpenWrt.syslog.xml</import-file>
-    <import-file>syslog/Procmail.syslog.xml</import-file>
-    <import-file>syslog/Postfix.syslog.xml</import-file>
-    <import-file>syslog/Sudo.syslog.xml</import-file>
-
 </syslogd-configuration>
